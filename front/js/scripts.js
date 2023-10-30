@@ -15,6 +15,7 @@ async function obterFilmes() {
         let celulaSinopse = linha.insertCell(1);
         celulaNome.innerHTML = filme.nome;
         celulaSinopse.innerHTML = filme.sinopse;
+        
     }
     // return filmes;
 }  

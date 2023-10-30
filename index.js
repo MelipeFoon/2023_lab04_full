@@ -6,6 +6,7 @@ app.use(cors());
 
 let filmes = [
     {
+        
         // id: 1,
         nome: "Capitão America",
         sinopse: "Capitão America é um super heroi da Marvel",
