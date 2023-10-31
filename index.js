@@ -6,7 +6,7 @@ app.use(cors());
 
 let filmes = [
     {
-        
+
         // id: 1,
         nome: "Capitão America",
         sinopse: "Capitão America é um super heroi da Marvel",
@@ -23,12 +23,6 @@ let filmes = [
         nome: "O Senhor dos Anéis",
         sinopse: "O Senhor dos Anéis é um filme de fantasia",
         imagemUrl: "https://br.web.img3.acsta.net/pictures/14/03/28/20/32/395879.jpg",
-    },
-    {
-        // id: 4,
-        nome: "Harry Potter",
-        sinopse: "Harry Potter é um bruxo da Grifinória",
-        imagemUrl: "https://br.web.img3.acsta.net/pictures/14/10/30/18/07/146886.jpg",
     },
 ]
 
@@ -50,15 +44,15 @@ app.get('/Corno', (req, res) => {
 
 //ponto de acesso para incluir um novo filme á lista de filmes
 app.post('/filmes', (req, res) => {
-    console.log(req.body.titulo);
+    console.log(req.body.nome);
     const filme = {
         // id: filmes.length + 1,
         nome: req.body.nome,
-        imagemUrl: req.body.imagemUrl
+        sinopse: req.body.sinopse
     }
     filmes.push(filme);
     // res.json(filmes)
-    res.send('Filme adicionado com sucesso');
+    res.send(filmes);
 });
 
 app.listen(3000, () => console.log('aplicação up and running'));
